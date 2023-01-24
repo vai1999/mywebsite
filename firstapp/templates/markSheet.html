@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Math</label>
+        <input type="number" name="subject1" ><br>
+        <label>Physics</label>
+        <input type="number" name="subject2" ><br>
+        <label>Social Science</label>
+        <input type="number" name="subject3" ><br>
+        <label>Hindi</label>
+        <input type="number" name="subject4"  ><br>
+        <label>English</label>
+        <input type="number" name="subject5"><br>
+        <label>Total Marksheet</label>
+        <input type="number" name="p" value={{total}}><br>
+        <label>Percantage</label>
+        <input type="number" name="p" value={{per}}><br>
+
+         <button type="submit">Calculate</button>
+    </form>
+    
+    <div>
+        <center>
+            <form method="post">
+                {% csrf_token %}
+                
+            <table border="1" cellspacing="5" bgcolor="white"
+            height="100" width="800">
+                <caption><b>Student Marksheet</b></caption>
+                <tr>
+                    
+                    <th colspan="5">Score</th>
+          
+                </tr>
+                <tr>
+                    <th>Hindi</th>
+                    <th>English</th>
+                    <th>Math</th>
+                    <th>Social Science</th>
+                    <th>Physics</th>
+                </tr>
+                <tr>
+                    
+                    <td>{{s1}} </td>
+                    <td>{{s2}} </td>
+                    <td>{{s3}} </td>
+                    <td>{{s4}} </td>
+                    <td>{{s5}} </td>
+                </tr>
+                   
+            </table>
+            <br>
+            <table border="1" cellspacing="5" bgcolor="white" 
+                   height="100" width="800" cellpadding="5" id="TableScore">
+                
+                <tr>
+                
+                    <th>Total :-  {{total}}</th>
+                    
+                    <th>Percantage :-  {{per}}</th>
+                    
+                    <th>Devison :- {{div}}</th>
+                </tr>
+                  
+            </table>
+            
+        </form>
+            </center>
+    </div>
+</body>
+</html>

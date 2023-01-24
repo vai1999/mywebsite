@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body bgcolor="yellow">
+	<a href="/firstapp/home"></a>
+
+	{% for x in rec %}
+
+	<h1 align="center">Welcome {{x.name}}</h1>
+	<h1>Name: {{x.name}}</h1><br>
+	<h1>F_Name: {{x.fname}}</h1><br>
+	<h1>Email: {{x.email}}</h1><br>
+	<h1>Password: {{x.passward}}</h1><br>
+	<h1>Gender: {{x.gender}}</h1><br>
+	<h1>Mobile: {{x.mob}}</h1><br>
+	<h1>DOB: {{x.dob}}</h1><br>
+
+	{% endfor %}
+
+</body>
+</html>
